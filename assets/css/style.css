@@ -1,7 +1,6 @@
 #sk-container #sk-wrapper .sk-msg {
     border-radius: 20px;
-    //background-color: #ff3333;
 }
 #sk-container #sk-wrapper .sk-msg::after {
-    // border-left-color: #ff3333;
+
 }
