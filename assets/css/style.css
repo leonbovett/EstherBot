@@ -1,6 +1,3 @@
-#sk-container #sk-wrapper .sk-msg {
+#sk-holder #sk-container #sk-conversation .sk-row .sk-msg-wrapper .sk-msg {
     border-radius: 20px;
-}
-#sk-container #sk-wrapper .sk-msg::after {
-
 }
