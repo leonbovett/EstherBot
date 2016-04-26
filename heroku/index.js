@@ -32,8 +32,7 @@ class BetterSmoochApiBot extends SmoochApiBot {
 }
 
 const name = 'eX4U';
-//const avatarUrl = 'https://s.gravatar.com/avatar/f91b04087e0125153623a3778e819c0a?s=80';
-const avatarUrl = 'https://ex4u.herokuapp.com/assets/img/4U.png';
+const avatarUrl = 'https://ex4u.herokuapp.com/static/img/4U.png';
 const store = new SmoochApiStore({
     jwt
 });
