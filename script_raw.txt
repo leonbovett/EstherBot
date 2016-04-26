@@ -1,0 +1,53 @@
+
+Levi: Hello Shaun, how can I help you today?
+
+Levi: Okay, You have a query about your payslip dated 19/04/16. Is this correct?
+
+
+Levi: Great, what’s your query?
+
+
+Levi: Sure, I can help increase your pension contributions. This will take approximately 5 minutes. How would you like to proceed?
+let’s do this now
+remind me at lunchtime
+please send me the company pensions policy
+
+Levi: Ok, let’s go. Payslips contain confidential information, for your safety please confirm the 1st, 3rd and 7th characters of your password to proceed...
+
+Levi: Thanks Shaun. Authenticating your password… one moment please
+
+
+
+Levi: Password accepted. Here’s an overview of your payslip:
+Gross pay £5000, pension contribution £50, taxable income £4,033.33, tax £1080, NI £377.13, Net pay £3,492.27
+You are currently contributing 1% of your salary to the pension scheme.
+
+
+
+
+Levi: People in similar roles contribute 5% of their pay. You can choose any proportion of your total salary up to 20%. If you tell me how much you are thinking of contributing I can show you a revised calculation for your payslip and pension scheme
+
+
+
+Levi: Thanks Shaun, I will provide you with a calculation based on a 10% contribution. Just crunching the numbers now…
+
+
+
+Levi: Okay, the results are in! An increase to 10% would mean you take home £270 less each month, but contribute £450 more to your pension. Please see the attachment for a full breakdown.
+
+[attachment]
+
+
+
+Levi: Choose a next step when you are ready:
+I would like another calculation
+I am happy with this calculation and would like to proceed
+I would like to speak to someone about my pension contributions
+
+
+Levi: Great. You would like to amend you pension contribution to 10% of your Salary, is this correct?
+
+
+Levi: Ok, I have submitted your instruction. This will take a couple of minutes, I will give you confirmation when it has been actioned.
+
+Is there anything else I can help you with right now?
