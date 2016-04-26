@@ -1,12 +1,12 @@
-{
-    "HELLO": "Hello, my name is eX4U, ask me a question about your rewards, requests, or performance!",
-    "PREVIEW": "View your preview here: http://ex4u.herokuapp.com/preview",
-    "PENSION": "Let's just check that you are who you say you are. What's your date of birth?",
-    "31/12/1999" : "Thank you Nick. As you're new to the company, you need to enrol into our pension scheme. I need answers to 5 questions in order to do that. Would you like to do that now, or shall I ask you later?",
-    "NOW": "Other people in similar roles contributed 5% of their pay. You can choose any proportion of your total salary up to 20%. What contribution rate would you prefer?",
-    "10%": "I understand that you would like to contribute 10% of your salary. That would provide you a projected yield of £40000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
-    "20%": "I understand that you would like to contribute 20% of your salary. That would provide you a projected yield of £80000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
-    "CONFIRM": "Great, thanks Nick. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return.",
-    "CONNECT ME": "",
-    "DISCONNECT": "Hi, eX4U is back."
-}
+[
+    { "keyword": "HELLO", "response": "Hello, my name is eX4U, ask me a question about your rewards, requests, or performance!" },
+    { "keyword": "PREVIEW", "response": "View your preview here: http://ex4u.herokuapp.com/preview" },
+    { "keyword": "PENSION", "response": "Let's just check that you are who you say you are. What's your date of birth?" },
+    { "keyword": "31/12/1999", "response": "Thank you Nick. As you're new to the company, you need to enrol into our pension scheme. I need answers to 5 questions in order to do that. Would you like to do that now, or shall I ask you later?" },
+    { "keyword": "NOW", "response": "Other people in similar roles contributed 5% of their pay. You can choose any proportion of your total salary up to 20%. What contribution rate would you prefer?" },
+    { "keyword": "10%", "response": "I understand that you would like to contribute 10% of your salary. That would provide you a projected yield of £40000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?" },
+    { "keyword": "20%", "response": "I understand that you would like to contribute 20% of your salary. That would provide you a projected yield of £80000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?" },
+    { "keyword": "CONFIRM", "response": "Great, thanks Nick. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return." },
+    { "keyword": "CONNECT ME", "response": "" },
+    { "keyword": "DISCONNECT", "response": "Hi, eX4U is back." }
+]

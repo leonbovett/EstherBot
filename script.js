@@ -39,6 +39,8 @@ module.exports = new Script({
             }
 
             function processMessage(isSilent) {
+
+/*
                 if (isSilent) {
                     return Promise.resolve("speak");
                 }
@@ -47,10 +49,28 @@ module.exports = new Script({
                     return bot.say(`I didn't understand that.`).then(() => 'speak');
                 }
 
+*/
+
+/*
                 var response = scriptRules[upperText];
                 var lines = response.split(/(<img src=\'[^>]*\'\/>)/);
+*/
+
+                var match = _.find(scriptRules, function(line) {
+                    var found = upperText.search(line.keyword);
+                    return found >= 0;
+                });
+
+                if (match === undefined) {
+                    return bot.say(`I didn't understand that.`).then(() => 'speak');
+                }
 
                 var p = Promise.resolve();
+                p = p.then(function() {
+                    return bot.say(match.response);
+                });
+
+                /*
                 _.each(lines, function(line) {
                     line = line.trim();
                     if (!line.startsWith("<")) {
@@ -58,16 +78,18 @@ module.exports = new Script({
                             return bot.say(line);
                         });
                     } else {
-                        // p = p.then(function() {
-                        //     var start = line.indexOf("'") + 1;
-                        //     var end = line.lastIndexOf("'");
-                        //     var imageFile = line.substring(start, end);
-                        //     return bot.sendImage(imageFile);
-                        // });
+                        p = p.then(function() {
+                            var start = line.indexOf("'") + 1;
+                            var end = line.lastIndexOf("'");
+                            var imageFile = line.substring(start, end);
+                            return bot.sendImage(imageFile);
+                        });
                     }
                 })
 
+                */
                 return p.then(() => 'speak');
+
             }
 
             return updateSilent()
