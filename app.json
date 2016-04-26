@@ -1,7 +1,7 @@
 {
   "name": "eX4U",
   "description": "eX4U Employee Experience Bot",
-  "repository": "https://github.com/leonbovett/smooch-bot-example",
+  "repository": "https://github.com/leonbovett/EstherBot",
   "env": {
     "SMOOCH_APP_TOKEN": {
       "description": "Your Smooch app token which is used to initialize the web widget.",
