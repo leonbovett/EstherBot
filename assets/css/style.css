@@ -1,4 +1,24 @@
-@media (max-width: 375px) {}
+@media  (max-width: 375px) {
+    #sk-holder #sk-container #sk-header .sk-show-handle{
+        display:none;
+    }
+
+    #sk-holder #sk-container #sk-settings-header .sk-show-handle{
+        display:none;
+    }
+
+    #sk-holder #sk-container #sk-conversation{
+        height:calc(100% - 85px);
+    }
+
+    #sk-holder #sk-container #sk-wrapper {
+        width: 100%;
+    }
+
+    #sk-holder #sk-container .sk-settings .settings-wrapper{
+        width:100%
+    }
+
     #sk-holder #sk-container.sk-appear, #sk-holder #sk-container.sk-appear #sk-wrapper {
         height: 100%;
     }
@@ -9,10 +29,13 @@
         width: 100%;
         border: none;
     }
-    #sk-holder #sk-container #sk-wrapper {
-        width: 100%;
+
+    #sk-holder{
+        width:100%;
+        height:100%
     }
 }
+
 
 #sk-holder #sk-container #sk-conversation .sk-row .sk-msg-wrapper .sk-msg {
     border-radius: 8px;
