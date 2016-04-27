@@ -66,7 +66,7 @@
             },
             {
                 "keyword": "20",
-                "response": "I understand that you would like to contribute 20% of your salary. That would provide you a projected yield of £80000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
+                "response": "I understand that you would like to contribute 20% of your salary. That would provide you a projected yield of £80000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps choose a different contribution rate?",
                 "target_context": "confirm"
             },
             {
@@ -78,7 +78,7 @@
         "confirm": [
             {
                 "keyword": "CONFIRM",
-                "response": "Great, thanks Nick. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return.",
+                "response": "Great, thanks Nick. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return. Let me know if there's anything else I can do for you today.",
                 "target_context": "idle"
             },
             {
