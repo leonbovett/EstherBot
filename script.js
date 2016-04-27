@@ -23,50 +23,43 @@ module.exports = new Script({
 
             let upperText = message.text.trim().toUpperCase();
 
-            function updateSilent() {
-                switch (upperText) {
-                    case "CONNECT ME":
-                        return bot.setProp("silent", true);
-                    case "DISCONNECT":
-                        return bot.setProp("silent", false);
-                    default:
-                        return Promise.resolve();
-                }
+            function getContext() {
+                var context = bot.getProp("context");
+                return context;
             }
 
-            function getSilent() {
-                return bot.getProp("silent");
+            function setContext(context) {
+                return bot.setProp("context", context);
             }
 
-            function processMessage(isSilent) {
+            function processMessage(context) {
 
-/*
-                if (isSilent) {
-                    return Promise.resolve("speak");
+                if(context === undefined) {
+                    context = "idle";
                 }
 
-                if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I didn't understand that.`).then(() => 'speak');
+                if (upperText === "") {
+                    return bot.say("I didn't catch that.").then(() => 'speak');
                 }
 
-*/
-
-/*
-                var response = scriptRules[upperText];
-                var lines = response.split(/(<img src=\'[^>]*\'\/>)/);
-*/
-
-                var match = _.find(scriptRules, function(line) {
-                    var found = upperText.search(line.keyword);
+                var rules = scriptRules[context];
+                var match = _.find(rules, function(line) {
+                    var found;
+                    if(line.keyword === "*") {
+                        found = 0;
+                    } else {
+                        found = upperText.search(line.keyword);
+                    }
                     return found >= 0;
                 });
 
                 if (match === undefined) {
-                    return bot.say(`I didn't understand that.`).then(() => 'speak');
+                    return bot.say("I didn't understand that.").then(() => 'speak');
                 }
 
                 var p = Promise.resolve();
                 p = p.then(function() {
+                    setContext(match.target_context);
                     return bot.say(match.response);
                 });
 
@@ -92,9 +85,8 @@ module.exports = new Script({
 
             }
 
-            return updateSilent()
-                .then(getSilent)
-                .then(processMessage);
+            return getContext()
+                    .then(processMessage)
         }
     }
 });
