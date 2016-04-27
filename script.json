@@ -16,6 +16,16 @@
                 "target_context": "identity"
             },
             {
+                "keyword": "REWARD",
+                "response": "Unfortunately the Rewards system is offline due to the end of year budgeting phase. Please try again in a few days.",
+                "target_context": "idle"
+            },
+            {
+                "keyword": "QUER",
+                "response": "Tell me about your other query.",
+                "target_context": "idle"
+            },
+            {
                 "keyword": "*",
                 "response": "I don't know where to start. Try asking your question another way?",
                 "target_context": "idle"
@@ -78,7 +88,7 @@
         "confirm": [
             {
                 "keyword": "CONFIRM",
-                "response": "Great, thanks Nick. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return. Let me know if there's anything else I can do for you today.",
+                "response": "Great, thanks Shaun. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return. Let me know if there's anything else I can do for you today.",
                 "target_context": "idle"
             },
             {
