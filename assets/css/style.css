@@ -16,7 +16,7 @@
     }
 
     #sk-holder #sk-container .sk-settings .settings-wrapper{
-        width:100%
+        width:100%;
     }
 
     #sk-holder #sk-container.sk-appear, #sk-holder #sk-container.sk-appear #sk-wrapper {
@@ -32,7 +32,44 @@
 
     #sk-holder{
         width:100%;
-        height:100%
+        height:100%;
+    }
+
+
+    #sk-container.sk-embedded #sk-header .sk-show-handle{
+        display:none
+    }
+
+    #sk-container.sk-embedded #sk-settings-header .sk-show-handle{
+        display:none;
+    }
+
+    #sk-container.sk-embedded #sk-conversation{
+        height:calc(100% - 85px);
+    }
+
+    #sk-container.sk-embedded .sk-settings .settings-wrapper{
+        width:100%;
+    }
+
+    html.sk-widget-opened,html.sk-widget-opened body{
+        overflow:hidden;
+        position:relative;
+        height:100%;
+        width:100%;
+        -webkit-overflow-scrolling:auto;
+    }
+
+    html.sk-widget-opened #sk-holder #sk-container #sk-header #sk-settings-handle,html.sk-widget-opened body #sk-holder #sk-container #sk-header #sk-settings-handle{
+        height:40px;
+        width:40px;
+        right:40px;
+    }
+
+    html.sk-widget-opened #sk-holder #sk-container #sk-header .sk-close-handle,html.sk-widget-opened body #sk-holder #sk-container #sk-header .sk-close-handle{
+        height:40px;
+        width:40px;
+        right:0;
     }
 }
 
