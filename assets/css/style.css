@@ -1,6 +1,6 @@
 @media (max-width: 375px) {}
     #sk-holder #sk-container.sk-appear, #sk-holder #sk-container.sk-appear #sk-wrapper {
-        height: 100% !important;
+        height: 100%;
     }
 
     #sk-holder #sk-container {
@@ -8,6 +8,9 @@
         border-radius: 0;
         width: 100%;
         border: none;
+    }
+    #sk-holder #sk-container #sk-wrapper {
+        width: 100%;
     }
 }
 
