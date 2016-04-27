@@ -12,7 +12,7 @@
     }
 
     #sk-holder #sk-container #sk-wrapper {
-        width: 100%;
+        width: 100% !important;
     }
 
     #sk-holder #sk-container .sk-settings .settings-wrapper{
