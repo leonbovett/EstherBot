@@ -45,12 +45,14 @@ module.exports = new Script({
                 var rules = scriptRules[context];
                 var match = _.find(rules, function(line) {
                     var found;
-                    if(line.keyword === "*") {
-                        found = 0;
-                    } else {
-                        found = upperText.search(line.keyword);
+                    if(line.keywords[0] === "*") {
+                        return true;
                     }
-                    return found >= 0;
+                    found = _.find(line.keywords, function(keyword) {
+                        var searchIndex = upperText.search(keyword);
+                        return searchIndex >= 0;
+                    });
+                    return found;
                 });
 
                 if (match === undefined) {

@@ -1,103 +1,108 @@
 {
         "idle": [
             {
-                "keyword": "HELLO",
-                "response": "Hi. You can ask me a question about your pension, payslips, rewards, requests, or other HR queries. ",
+                "keywords": ["HELLO", "HI"],
+                "response": "Hi there. Can I help?",
                 "target_context": "idle"
             },
             {
-                "keyword": "PAYSLIP",
+                "keywords": ["HELP", "YES"],
+                "response": "You can ask me a question about your pension, payslips, rewards, requests, or other HR queries. ",
+                "target_context": "idle"
+            },
+            {
+                "keywords": ["PAYSLIP"],
                 "response": "Okay, You have a query about your payslip dated 19/04/16. Is this correct?",
                 "target_context": "identity"
             },
             {
-                "keyword": "PENSION",
+                "keywords": ["PENSION"],
                 "response": "Sure, I can help increase your pension contributions. This will take approximately 5 minutes. Do you want to do that now?",
                 "target_context": "identity"
             },
             {
-                "keyword": "REWARD",
+                "keywords": ["REWARD"],
                 "response": "Unfortunately the Rewards system is offline due to the end of year budgeting phase. Please try again in a few days.",
                 "target_context": "idle"
             },
             {
-                "keyword": "QUER",
+                "keywords": ["QUER"],
                 "response": "Tell me about your other query.",
                 "target_context": "idle"
             },
             {
-                "keyword": "*",
+                "keywords": ["*"],
                 "response": "I don't know where to start. Try asking your question another way?",
                 "target_context": "idle"
             }
         ],
         "identity": [
             {
-                "keyword": "YES",
+                "keywords": ["YES"],
                 "response": "You've asked about confidential information. For your security, please confirm the 1st, 3rd and 7th characters of your password to proceed.",
                 "target_context": "identity"
             },
             {
-                "keyword": "NO",
+                "keywords": ["NO"],
                 "response": "Ok. Is there anything else I can help you with today?",
                 "target_context": "idle"
             },
             {
-                "keyword": "SA",
+                "keywords": ["SA"],
                 "response": "Thank you Shaun. Would you like to proceed now or later?",
                 "target_context": "pension"
             },
             {
-                "keyword": "*",
+                "keywords": ["*"],
                 "response": "Your password was incorrect. Please try again.",
                 "target_context": "identity"
             }
         ],
         "pension": [
             {
-                "keyword": "NOW",
+                "keywords": ["NOW"],
                 "response": "Ok, let's start. Here’s an overview of your payslip: \nGross pay £5000, pension contribution £50, taxable income £4,033.33, tax £1080, NI £377.13, Net pay £3,492.27 \nYou are currently contributing 1% of your salary to the pension scheme. \nWhat would you like to set as your new contribution rate? or Would you like to see an illustration of your pension?",
                 "target_context": "pension"
             },
             {
-                "keyword": "LATER",
+                "keywords": ["LATER"],
                 "response": "Ok, Ask me again later on when you have time.",
                 "target_context": "idle"
             },
             {
-                "keyword": "ILLUS",
+                "keywords": ["ILLUS"],
                 "response": "View your preview here: http://ex4u.herokuapp.com/static/img/preview.png then let me know the contribution rate you would like to set.",
                 "target_context": "pension"
             },
             {
-                "keyword": "10",
+                "keywords": ["10"],
                 "response": "I understand that you would like to contribute 10% of your salary. That would provide you a projected yield of £40000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
                 "target_context": "confirm"
             },
             {
-                "keyword": "20",
+                "keywords": ["20"],
                 "response": "I understand that you would like to contribute 20% of your salary. That would provide you a projected yield of £80000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps choose a different contribution rate?",
                 "target_context": "confirm"
             },
             {
-                "keyword": "*",
+                "keywords": ["*"],
                 "response": "I didn't undertand. Do you want to try again now or later?",
                 "target_context": "pension"
             }
         ],
         "confirm": [
             {
-                "keyword": "CONFIRM",
+                "keywords": ["CONFIRM"],
                 "response": "Great, thanks Shaun. You have confirmed that you would like to contribute 20% of your salary. I'll set that up for you. Some forms will be sent to your office address for you to sign and return. Let me know if there's anything else I can do for you today.",
                 "target_context": "idle"
             },
             {
-                "keyword": "DIFF",
+                "keywords": ["DIFF"],
                 "response": "Ok, what amount did you have in mind?",
                 "target_context": "pension"
             },
             {
-                "keyword": "NO",
+                "keywords": ["NO"],
                 "response": "Ok, let me know if there's anything else I can do for you.",
                 "target_context": "idle"
             }
