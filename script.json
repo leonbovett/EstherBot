@@ -75,6 +75,12 @@
                 "target_context": "pension"
             },
             {
+                "keywords": ["%d"],
+                "variables": ["contribution"],
+                "response": "I understand that you would like to contribute %d% of your salary. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
+                "target_context": "confirm"
+            },
+            {
                 "keywords": ["10"],
                 "response": "I understand that you would like to contribute 10% of your salary. That would provide you a projected yield of £40000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
                 "target_context": "confirm"

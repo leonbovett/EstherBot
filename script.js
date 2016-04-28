@@ -22,6 +22,8 @@ module.exports = new Script({
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
+            let numbers = _.words(upperText, /[\d^, ]+/g);
+            console.log("numbers: " + numbers);
 
             function getContext() {
                 var context = bot.getProp("context");
@@ -49,8 +51,15 @@ module.exports = new Script({
                         return true;
                     }
                     found = _.find(line.keywords, function(keyword) {
-                        var searchIndex = upperText.search(keyword);
-                        return searchIndex >= 0;
+                        var token = keyword.substring(0, 2);
+                        if( token === "%d") {
+                            return (numbers.length > 0);
+                        } else {
+                            var searchIndex = upperText.search(keyword);
+                            return (searchIndex >= 0);
+                        }
+
+
                     });
                     return found;
                 });
@@ -62,7 +71,10 @@ module.exports = new Script({
                 var p = Promise.resolve();
                 p = p.then(function() {
                     setContext(match.target_context);
-                    return bot.say(match.response);
+                    var response = _.replace(match.response, /%d/, numbers[0]);
+                    console.log("response: " + response);
+
+                    return bot.say(response);
                 });
 
                 /*
