@@ -70,8 +70,11 @@ module.exports = new Script({
                 var p = Promise.resolve();
                 p = p.then(function() {
                     setContext(match.target_context);
-                    var response = _.replace(match.response, /%d/, numbers[0]);
-                    return bot.say(response);
+
+                    _.forEach(match.responses, function(response, key) {
+                        var responseText = _.replace(response, /%d/, numbers[0]);
+                        return bot.say(responseText);
+                    });
                 });
 
                 /*
