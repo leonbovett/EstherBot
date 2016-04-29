@@ -131,7 +131,7 @@
                 "keywords": ["*"],
                 "responses": [
                     "I didn't undertand.",
-                    "What would you like to set as your new contribution rate, expressed as a percentage of your gross salary?"
+                    "What would you like to set as your new contribution rate,  or would you rather leave it unchanged?"
                 ],
                 "target_context": "pension"
             }
