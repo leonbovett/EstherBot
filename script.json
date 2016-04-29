@@ -129,7 +129,10 @@
             },
             {
                 "keywords": ["*"],
-                "responses": ["I didn't undertand. Do you want to try again now or later?"],
+                "responses": [
+                    "I didn't undertand.",
+                    "What would you like to set as your new contribution rate, expressed as a percentage of your gross salary?"
+                ],
                 "target_context": "pension"
             }
         ],
