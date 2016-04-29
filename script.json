@@ -95,6 +95,11 @@
                 "target_context": "pension"
             },
             {
+                "keywords": ["SET", "NEW", "RATE", "HELP"],
+                "responses": ["What would you like to set as your new contribution rate, expressed as a percentage of your gross salary?"],
+                "target_context": "pension"
+            },
+            {
                 "keywords": ["10"],
                 "responses": [
                     "I understand that you would like to contribute 10% of your salary. An increase to 10% would mean you take home £135 less each month, but contribute £225 more to your pension.",
@@ -121,11 +126,6 @@
                 "variables": ["contribution"],
                 "responses": ["Ok your rate is unchanged. Is there anything else I can help you with today?"],
                 "target_context": "idle"
-            },
-            {
-                "keywords": ["SET", "NEW", "RATE", "HELP"],
-                "responses": ["What would you like to set as your new contribution rate, expressed as a percentage of your gross salary?"],
-                "target_context": "pension"
             },
             {
                 "keywords": ["*"],
