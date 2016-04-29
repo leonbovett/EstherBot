@@ -13,7 +13,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hello Shaun, how can I help you today?')
+            return bot.say("Hi Shaun, you will have recently received your first payslip. I thought I would check in to see if you have any questions relating to it?")
                 .then(() => 'speak');
         }
     },
@@ -23,7 +23,6 @@ module.exports = new Script({
 
             let upperText = message.text.trim().toUpperCase();
             let numbers = _.words(upperText, /[\d^, ]+/g);
-            console.log("numbers: " + numbers);
 
             function getContext() {
                 var context = bot.getProp("context");
@@ -72,8 +71,6 @@ module.exports = new Script({
                 p = p.then(function() {
                     setContext(match.target_context);
                     var response = _.replace(match.response, /%d/, numbers[0]);
-                    console.log("response: " + response);
-
                     return bot.say(response);
                 });
 

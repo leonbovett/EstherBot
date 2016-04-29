@@ -6,8 +6,18 @@
                 "target_context": "idle"
             },
             {
-                "keywords": ["HELP", "YES"],
+                "keywords": ["HELP"],
                 "response": "You can ask me a question about your pension, payslips, rewards, requests, or other HR queries. ",
+                "target_context": "idle"
+            },
+            {
+                "keywords": ["YES"],
+                "response": "Great, what’s your query, or do you need help?",
+                "target_context": "idle"
+            },
+            {
+                "keywords": ["NO"],
+                "response": "Ok, let me know if you need anything in the future.",
                 "target_context": "idle"
             },
             {
@@ -16,8 +26,8 @@
                 "target_context": "identity"
             },
             {
-                "keywords": ["PENSION"],
-                "response": "Sure, I can help increase your pension contributions. This will take approximately 5 minutes. Do you want to do that now?",
+                "keywords": ["PENSION", "INCREASE"],
+                "response": "Sure, I can help increase your pension contributions. This will take approximately 5 minutes. Do you want to do that now, or would you rather that I send you a copy of the Pension Policy?",
                 "target_context": "identity"
             },
             {
@@ -26,7 +36,12 @@
                 "target_context": "idle"
             },
             {
-                "keywords": ["QUER"],
+                "keywords": ["REQUEST"],
+                "response": "Requests are being outsourced, please use the HR Portal for now.",
+                "target_context": "idle"
+            },
+            {
+                "keywords": ["OTHER", "QUER"],
                 "response": "Tell me about your other query.",
                 "target_context": "idle"
             },
@@ -38,7 +53,12 @@
         ],
         "identity": [
             {
-                "keywords": ["YES"],
+                "keywords": ["SEND", "POLICY", "PENSION"],
+                "response": "Ok I will send you the Pension Policy. Is there anything else I can help you with today?",
+                "target_context": "idle"
+            },
+            {
+                "keywords": ["YES", "NOW"],
                 "response": "You've asked about confidential information. For your security, please confirm the 1st, 3rd and 7th characters of your password to proceed.",
                 "target_context": "identity"
             },
@@ -49,7 +69,7 @@
             },
             {
                 "keywords": ["SA"],
-                "response": "Thank you Shaun. Would you like to proceed now or later?",
+                "response": "Thank you, Shaun. Ok, let's start. Here’s an overview of your payslip: \nGross pay £5000, pension contribution £50, taxable income £4,033.33, tax £1080, NI £377.13, Net pay £3,492.27 \nYou are currently contributing 1% of your salary to the pension scheme. \nWould you like to set your new contribution rate, leave it unchanged, or would you like to see an illustration of your pension?",
                 "target_context": "pension"
             },
             {
@@ -60,25 +80,14 @@
         ],
         "pension": [
             {
-                "keywords": ["NOW"],
-                "response": "Ok, let's start. Here’s an overview of your payslip: \nGross pay £5000, pension contribution £50, taxable income £4,033.33, tax £1080, NI £377.13, Net pay £3,492.27 \nYou are currently contributing 1% of your salary to the pension scheme. \nWhat would you like to set as your new contribution rate? or Would you like to see an illustration of your pension?",
-                "target_context": "pension"
-            },
-            {
-                "keywords": ["LATER"],
-                "response": "Ok, Ask me again later on when you have time.",
-                "target_context": "idle"
-            },
-            {
                 "keywords": ["ILLUS"],
                 "response": "View your preview here: http://ex4u.herokuapp.com/static/img/preview.png then let me know the contribution rate you would like to set.",
                 "target_context": "pension"
             },
             {
-                "keywords": ["%d"],
-                "variables": ["contribution"],
-                "response": "I understand that you would like to contribute %d% of your salary. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
-                "target_context": "confirm"
+                "keywords": ["SET", "NEW", "RATE", "HELP"],
+                "response": "What would you like to set as your new contribution rate, expressed as a percentage of your gross salary?",
+                "target_context": "pension"
             },
             {
                 "keywords": ["10"],
@@ -89,6 +98,18 @@
                 "keywords": ["20"],
                 "response": "I understand that you would like to contribute 20% of your salary. That would provide you a projected yield of £80000 in today's currency at the standard retirement age. Would you like to confirm that? Or perhaps choose a different contribution rate?",
                 "target_context": "confirm"
+            },
+            {
+                "keywords": ["%d"],
+                "variables": ["contribution"],
+                "response": "I understand that you would like to contribute %d% of your salary. Would you like to confirm that? Or perhaps you would prefer a different contribution rate?",
+                "target_context": "confirm"
+            },
+            {
+                "keywords": ["UNCHANGED"],
+                "variables": ["contribution"],
+                "response": "Ok your rate is unchanged. Is there anything else I can help you with today?",
+                "target_context": "idle"
             },
             {
                 "keywords": ["*"],
@@ -104,13 +125,18 @@
             },
             {
                 "keywords": ["DIFF"],
-                "response": "Ok, what amount did you have in mind?",
+                "response": "Ok, what contribution rate did you have in mind?",
                 "target_context": "pension"
             },
             {
                 "keywords": ["NO"],
                 "response": "Ok, let me know if there's anything else I can do for you.",
                 "target_context": "idle"
+            },
+            {
+                "keywords": ["*"],
+                "response": "Ok, what contribution rate did you have in mind?",
+                "target_context": "pension"
             }
         ]
     }
