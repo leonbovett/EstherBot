@@ -71,10 +71,11 @@ module.exports = new Script({
                 p = p.then(function() {
                     setContext(match.target_context);
 
+                    var responseText = "";
                     _.forEach(match.responses, function(response, key) {
-                        var responseText = _.replace(response, /%d/, numbers[0]);
-                        return bot.say(responseText);
+                        responseText += _.replace(response, /%d/, numbers[0]) + " ";
                     });
+                    return bot.say(responseText);
                 });
 
                 /*
