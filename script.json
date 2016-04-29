@@ -1,6 +1,11 @@
 {
         "idle": [
             {
+                "keywords": ["START"],
+                "responses": ["Hi Shaun, you will have recently received your first payslip. I thought I would check in to see if you have any questions relating to it?"],
+                "target_context": "idle"
+            },
+            {
                 "keywords": ["HELLO", "HI"],
                 "responses": ["Hi there. Can I help?"],
                 "target_context": "idle"
